@@ -1,0 +1,57 @@
+<%= form_for(@student) do |f| %>
+  <div class='headings'><h2>Add New Student</h2></div>
+  
+  <div class = 'std_image'>
+    <img src='/images/mine.jpg' width='180px' height='180px'/>
+  </div>
+
+  <div class = 'std_info'>
+
+    <div>
+      <div class='labels' >
+        <%= mark_required(@student, :stdId) %><%= f.label :"Student Id :" %>
+      </div>
+      <div class='fields'>
+        <%= f.text_field :stdId %>
+      </div>
+    </div>
+
+    <div>
+      <div class='labels' >
+        <%= mark_required(@student, :name) %><%= f.label :"Full Name :" %>
+      </div>
+      <div class='fields'>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+
+    <div>
+      <div class='labels' >
+        <%= mark_required(@student, :major) %><%= f.label :"Major In:" %>
+      </div>
+      <div class='fields'>
+        <%= f.text_field :major %>
+      </div>
+    </div>
+
+    <div>
+      <div class='labels' >
+        <%= mark_required(@student, :pict) %><%= f.label :"Image Url :" %>
+      </div>
+      <div class='fields'>
+        <%= f.text_field :pict %>
+      </div>
+    </div>
+
+    <div class = 'submits'>
+      <%= f.submit :"Add Student" %>
+    </div>
+    
+  <div class='error_class'>
+    <%= f.error_messages%>
+  </div>
+    
+  </div>
+
+
+<% end %>

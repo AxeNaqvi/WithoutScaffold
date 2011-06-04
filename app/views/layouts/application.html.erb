@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WithoutScaffold</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id='header' class='headfoot'>
+  <div id='searching'>
+    <%= render :partial =>"search"%>
+  </div>
+  <div id='main_heading'>𐌰𐍇𐌴 𐌽𐌰𐍉υ𐌹</div>
+
+</div>
+
+
+<div id='main_body'>
+  <%= yield %>
+</div>
+
+<div id='footer' class='headfoot'>
+  𐌰𐍇𐌴 𐌽𐌰𐍉υ𐌹<br/>
+  <p>All rights reserved..2011-2012</p>
+</div>
+
+</body>
+</html>

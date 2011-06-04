@@ -1,0 +1,71 @@
+<div class='top_nav'>
+  <p><%= link_to "Delete" , {:action => 'delete'} %> | <%= link_to "Edit" , {:action => 'edit'} %> | <%= link_to "Index", {:action => 'index'}%></p>
+</div>
+
+<div class='main_content'>
+
+
+
+<% if @student.blank? %>
+
+  <div>
+    <p>
+      There were no records found...
+    </p>
+  </div>
+
+<% else %>
+
+  <div class='headings'><h2>Details Of <%= @student.name%></h2></div>
+
+  <div class = 'std_image'>
+    <img src='/images/mine.jpg' width='180px' height='180px'/>
+  </div>
+
+  <div class = 'std_info'>
+
+    <div>
+      <div class='labels'>
+        Student Id :
+      </div>
+      <div class='fields_show'>
+        <%= @student.stdId%>
+      </div>
+    </div>
+    
+    <div>
+      <div class='labels'>
+        Full Name :
+      </div>
+      <div class='fields_show'>
+        <%= @student.name%>
+      </div>
+    </div>
+
+    <div>
+      <div class='labels'>
+        Major In:
+      </div>
+      <div class='fields_show'>
+        <%= @student.major%>
+      </div>
+    </div>
+
+    <div>
+      <div class='labels'>
+        Image Url :
+      </div>
+      <div class='fields_show'>
+        <%= @student.pict%>
+      </div>
+    </div>
+    
+  </div>
+
+<% end %>
+
+</div>
+
+</div>
+
+

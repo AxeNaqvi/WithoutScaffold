@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  stdId: 1
+  major: MyString
+  pict: MyString
+
+two:
+  name: MyString
+  stdId: 1
+  major: MyString
+  pict: MyString

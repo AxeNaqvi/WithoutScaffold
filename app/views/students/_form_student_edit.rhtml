@@ -1,0 +1,56 @@
+<%= form_for(@student ) do |f| %> 
+  <div class='headings'><h2>Edit <%= @student.name%></h2></div>
+  
+  <div class = 'std_image'>
+    <img src='/images/mine.jpg' width='180px' height='180px'/>
+  </div>
+
+  <div class = 'std_info'>
+
+    <div>
+      <div class='labels' >
+        <%= f.label :"Student Id :" %>
+      </div>
+      <div class='fields'>
+        <%= f.text_field :stdId %>
+      </div>
+    </div>
+
+    <div>
+      <div class='labels' >
+        <%= f.label :"Full Name :" %>
+      </div>
+      <div class='fields'>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+
+    <div>
+      <div class='labels' >
+        <%= f.label :"Major In:" %>
+      </div>
+      <div class='fields'>
+        <%= f.text_field :major %>
+      </div>
+    </div>
+
+    <div>
+      <div class='labels' >
+        <%= f.label :"Image Url :" %>
+      </div>
+      <div class='fields'>
+        <%= f.text_field :pict %>
+      </div>
+    </div>
+
+    <div class = 'submits'>
+      <%= f.submit :"Save Changes" %>
+    </div>
+
+    <div class='error_class'>
+      <%= f.error_messages%>
+    </div>
+
+  </div>
+
+<% end %>
